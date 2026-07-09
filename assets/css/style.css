@@ -1,0 +1,88 @@
+:root {
+  /* ===== Color ===== */
+  --color-primary: hsl(221, 83%, 53%); /* #2563EB */
+  --color-primary-hover: hsl(224, 76%, 48%); /* #1D4ED8 */
+
+  --color-heading: hsl(211, 53%, 11%); /* #0D1B2A */
+  --color-text: hsl(0, 0%, 34%); /* #575757 */
+  --color-muted: hsl(0, 0%, 53%); /* #888888 */
+
+  --color-background: hsl(0, 0%, 100%); /* #FFFFFF */
+  --color-surface: hsl(0, 0%, 100%); /* #FFFFFF */
+  --color-border: hsl(220, 13%, 91%); /* #E5E7EB */
+
+  /* ===== Font & Typography ===== */
+  --ff-base: "Inter", Arial, sans-serif;
+
+  /* 13, 14, 16, 20, 22, 24, 48, 56, 80 */
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.25rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.5rem;
+  --fs-5xl: 3rem;
+  --fs-6xl: 3.5rem;
+  --fs-8xl: 5rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+/* ===== CSS Reset ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: var(--fw-regular) var(--fs-base) / 1.6 var(--ff-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--fw-bold);
+  color: var(--color-heading);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reusable Css classes */
+.section {
+  padding-block: 5rem 2rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 4rem;
+}
+
+/* Header Section */
+
+/* Banner Section */
+
+/* Speakers Section */
+
+/* Price Section */
+
+/* Footer Section */
