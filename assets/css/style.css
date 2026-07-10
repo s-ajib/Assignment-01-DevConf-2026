@@ -138,7 +138,7 @@ img {
   background-position: center;
 }
 
-.section__container {
+.banner__container {
   padding-block: 6rem 2rem;
   text-align: center;
 }
@@ -161,7 +161,45 @@ img {
   padding: 1rem 3rem;
 }
 /* Speakers Section */
+.section__title {
+  font-size: var(--fs-6xl);
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
 
+.speakers__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.speaker__card {
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.speaker__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.speaker__category {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.3px;
+  color: var(--color-primary);
+}
+
+.speaker__name {
+  font-size: var(--fs-md);
+}
+
+.speaker__role {
+  font-size: var(--fs-sm);
+}
 /* Price Section */
 
 /* Footer Section */
