@@ -20,6 +20,11 @@
       rel="stylesheet"
     />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <!-- stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
@@ -131,7 +136,7 @@
               <p class="pricing__price">$399</p>
               <span class="pricing__unit">per person</span>
             </div>
-
+            <hr />
             <ul class="pricing__list">
               <li class="pricing__item">Access to all 3 conference days</li>
               <li class="pricing__item">48 curated technical talks</li>
@@ -141,17 +146,17 @@
               <li class="pricing__item">Digital recordings (30 days)</li>
             </ul>
 
-            <a href="#" class="btn btn--outline pricing__btn">Get Standard</a>
+            <a href="#" class="btn pricing__btn btn__standard">Get Standard</a>
           </article>
 
           <!-- Pro Plan (Featured) -->
-          <article class="pricing__card pricing__card--featured">
+          <article class="pricing__card pricing__card-featured">
             <div class="pricing__header">
               <h3 class="pricing__label">Pro</h3>
               <p class="pricing__price">$749</p>
               <span class="pricing__unit">per person</span>
             </div>
-
+            <hr />
             <ul class="pricing__list">
               <li class="pricing__item">Everything in Standard</li>
               <li class="pricing__item">Unlimited workshop access</li>
@@ -161,7 +166,7 @@
               <li class="pricing__item">1-on-1 mentorship (30 min)</li>
             </ul>
 
-            <a href="#" class="btn btn--primary pricing__btn">Get Pro</a>
+            <a href="#" class="btn pricing__btn btn__pro">Get Pro</a>
           </article>
 
           <!-- Team Plan -->
@@ -171,7 +176,7 @@
               <p class="pricing__price">$5,999</p>
               <span class="pricing__unit">up to 10 people</span>
             </div>
-
+            <hr />
             <ul class="pricing__list">
               <li class="pricing__item">Everything in Pro (10 seats)</li>
               <li class="pricing__item">Dedicated team lounge access</li>
@@ -181,13 +186,49 @@
               <li class="pricing__item">Priority customer support</li>
             </ul>
 
-            <a href="#" class="btn btn--outline pricing__btn">Contact Us</a>
+            <a href="#" class="btn pricing__btn btn__team">Contact Us</a>
           </article>
         </div>
       </section>
     </main>
 
     <!-- Footer Section -->
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <section class="footer__section container">
+        <div class="footer__content">
+          <a href="#" class="footer__logo"
+            ><img src="./assets/images/footer-logo.png" alt="footer logo"
+          /></a>
+
+          <ul class="footer__social-link">
+            <li>
+              <a href="#" class="social__link"
+                ><i class="ri-facebook-fill"></i
+              ></a>
+            </li>
+
+            <li>
+              <a href="#" class="social__link"
+                ><i class="ri-github-fill"></i
+              ></a>
+            </li>
+
+            <li>
+              <a href="#" class="social__link"
+                ><i class="ri-linkedin-fill"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="footer__copyright">
+          <p class="copyright__text">© 2026 DevConf. All rights reserved.</p>
+          <div class="copyright__links">
+            <a href="#" class="copyright__link">Privacy Policy</a>
+            <a href="#" class="copyright__link">Terms of Service</a>
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
