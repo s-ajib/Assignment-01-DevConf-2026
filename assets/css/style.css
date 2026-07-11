@@ -39,6 +39,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--ff-base);
   font-size: var(--fs-base);
@@ -78,6 +82,10 @@ img {
   height: auto;
 }
 
+.main {
+  padding-top: 6rem;
+}
+
 /* Reusable Css classes */
 .section {
   padding-block: 7rem 3rem;
@@ -110,9 +118,7 @@ img {
   font-weight: var(--fw-semibold);
   color: var(--color-white);
   text-align: center;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn:hover {
@@ -145,6 +151,11 @@ img {
 
 .nav__link {
   line-height: 1.6;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--color-primary);
 }
 
 .nav__cta {
@@ -153,10 +164,9 @@ img {
 
 /* Banner Section */
 .banner {
-  min-height: calc(100vh - 5.5rem);
   display: grid;
   justify-content: center;
-  grid-template-columns: 960px;
+  grid-template-columns: minmax(0, 960px);
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0) 70%),
     linear-gradient(52deg, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, 0.88) 87%),
@@ -167,7 +177,6 @@ img {
 }
 
 .banner__container {
-  padding-block: 6rem 2rem;
   text-align: center;
 }
 
@@ -179,9 +188,9 @@ img {
 }
 
 .banner__desc {
-  padding: 1.5rem 2rem 20rem;
+  padding: 1.5rem 2rem 18rem;
   font-size: var(--fs-lg);
-  line-height: 1.1;
+  /* line-height: 1.1; */
   color: hsl(0, 0%, 80%);
 }
 
@@ -208,6 +217,13 @@ img {
   border-radius: 0.75rem;
   border: 1px solid var(--color-border);
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.speaker__card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px hsla(221, 83%, 50%, 0.04);
+  transform: translateY(-2px);
 }
 
 .speaker__content {
@@ -231,13 +247,15 @@ img {
 
 .speaker__role {
   font-size: var(--fs-sm);
+  color: var(--color-muted);
 }
 
 /* Pricing Section */
 .pricing__container {
   display: grid;
-  grid-template-columns: repeat(3, 370px);
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 1160px;
   column-gap: 1.5rem;
 }
 
@@ -245,11 +263,20 @@ img {
   padding: 2rem;
   border-radius: 0.75rem;
   border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
 }
 
 .pricing__card-featured {
   background-color: var(--color-heading);
   border-color: var(--color-heading);
+}
+
+.pricing__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px hsla(221, 83%, 50%, 0.05);
+}
+.pricing__card-featured:hover {
+  box-shadow: 0 15px 35px hsla(211, 53%, 11%, 0.25);
 }
 
 .pricing__label {
@@ -545,7 +572,7 @@ img {
 
 .footer hr {
   border: none;
-  border-top: 1px solid var(--color-muted);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
   width: 100%;
   margin-block: 1rem;
 }
