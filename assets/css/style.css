@@ -192,6 +192,11 @@ img {
 }
 
 /* Speakers Section */
+.pricing__end,
+.schedule__date {
+  color: var(--color-heading);
+  font-weight: var(--fw-semibold);
+}
 .speakers__container {
   margin-top: 4rem;
   display: grid;
@@ -216,6 +221,7 @@ img {
   font-weight: var(--fw-semibold);
   letter-spacing: 0.3px;
   color: var(--color-primary);
+  text-transform: uppercase;
   margin-bottom: 4px;
 }
 
@@ -326,6 +332,209 @@ img {
 .btn__standard:hover,
 .btn__team:hover {
   color: var(--color-white);
+}
+
+/* ===== Event Schedule Section ===== */
+.schedule {
+  margin-bottom: 5rem;
+}
+
+.schedule__container {
+  max-width: 960px; /* Aligns with the narrow banner column layout */
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Gap managed by padding to keep timeline line solid and contiguous */
+}
+
+.schedule__item {
+  display: grid;
+  grid-template-columns: 140px 60px 1fr;
+  align-items: stretch;
+}
+
+/* Left Column: Time details */
+.schedule__time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1.5rem 1rem 0 0;
+}
+
+.schedule__time-start {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-heading);
+  line-height: 1;
+}
+
+.schedule__time-duration {
+  font-size: var(--fs-sm);
+  color: var(--color-muted);
+  margin-top: 0.25rem;
+}
+
+/* Middle Column: Timeline Track */
+.schedule__timeline {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.schedule__timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-border);
+  z-index: 1;
+}
+
+/* Clip timeline tracking lines at endpoints */
+.schedule__item:first-child .schedule__timeline::before {
+  top: 1.75rem;
+}
+
+.schedule__item:last-child .schedule__timeline::before {
+  bottom: calc(100% - 1.75rem);
+}
+
+.schedule__node {
+  position: relative;
+  top: 1.6rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 3px solid var(--color-border);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+/* Timeline Hover Highlights */
+.schedule__item:hover .schedule__node {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  transform: scale(1.2);
+  box-shadow: 0 0 0 6px hsla(221, 83%, 53%, 0.15);
+}
+
+/* Right Column: Session Agenda Cards */
+.schedule__card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  margin-bottom: 2rem; /* creates spacing between agenda items */
+  transition: all 0.3s ease;
+}
+
+.schedule__item:last-child .schedule__card {
+  margin-bottom: 0;
+}
+
+.schedule__card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px hsla(221, 83%, 50%, 0.04);
+  transform: translateY(-2px);
+}
+
+.schedule__card--event {
+  background-color: hsl(220, 13%, 98%);
+}
+
+.schedule__badge {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  padding: 0.375rem 0.75rem;
+  border-radius: 999px;
+  line-height: 1;
+}
+
+/* Specific Badge Color Schemes */
+.badge--keynote {
+  background: hsl(211, 53%, 11%);
+  color: var(--color-white);
+}
+.badge--ai-ml {
+  background: hsl(221, 83%, 96%);
+  color: var(--color-primary-hover);
+}
+.badge--frontend {
+  background: hsl(160, 60%, 94%);
+  color: hsl(160, 60%, 30%);
+}
+.badge--event {
+  background: var(--color-white);
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+}
+.badge--devops {
+  background: hsl(35, 90%, 94%);
+  color: hsl(30, 70%, 38%);
+}
+.badge--security {
+  background: hsl(350, 80%, 95%);
+  color: hsl(350, 65%, 45%);
+}
+.badge--closing {
+  background: hsl(211, 53%, 11%);
+  color: var(--color-white);
+}
+
+.schedule__title {
+  font-size: var(--fs-md);
+  margin-block: 1rem 0.375rem;
+}
+
+.schedule__desc {
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  padding-bottom: 1.25rem;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+/* Speaker Profile inside Cards */
+.schedule__speaker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.schedule__speaker-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+
+.schedule__event-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  color: var(--color-heading);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.schedule__speaker-name {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--color-heading);
+}
+
+.schedule__speaker-role {
+  font-size: var(--fs-sm);
+  color: var(--color-muted);
+  margin-top: 0.15rem;
 }
 
 /* Footer Section */

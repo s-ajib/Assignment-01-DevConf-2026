@@ -127,7 +127,8 @@
       <section class="pricing section" id="pricing">
         <h2 class="section__title">Secure Your Spot</h2>
         <p class="section__subtitle">
-          Early-bird pricing ends August 15, 2026.
+          Early-bird pricing ends
+          <span class="pricing__end">August 15, 2026</span>.
         </p>
 
         <div class="pricing__container container">
@@ -194,6 +195,268 @@
               >Contact Us</a
             >
           </article>
+        </div>
+      </section>
+
+      <!-- Event Schedule Section -->
+      <section class="schedule section" id="schedule">
+        <h2 class="section__title">Event Schedule</h2>
+        <p class="section__subtitle">
+          Plan your day at DevConf 2026 on
+          <span class="schedule__date">20 July 2026</span>.
+        </p>
+
+        <div class="schedule__container container">
+          <!-- Item 1: Keynote -->
+          <div class="schedule__item">
+            <div class="schedule__time">
+              <time class="schedule__time-start" datetime="2026-07-20T09:00"
+                >09:00 AM</time
+              >
+              <time class="schedule__time-duration" datetime="PT60M"
+                >60 mins</time
+              >
+            </div>
+            <div class="schedule__timeline">
+              <div class="schedule__node"></div>
+            </div>
+            <article class="schedule__card">
+              <span class="schedule__badge badge--keynote">Keynote</span>
+              <h3 class="schedule__title">
+                The Future of Agentic Development & Intelligent Codebases
+              </h3>
+              <p class="schedule__desc">
+                Kick off DevConf 2026 with a visionary talk on how autonomous
+                software agents are transforming development lifecycles.
+              </p>
+              <div class="schedule__speaker">
+                <img
+                  src="./assets/images/andrej.png"
+                  alt="Andrej Karpathy"
+                  class="schedule__speaker-img"
+                />
+                <div>
+                  <h4 class="schedule__speaker-name">Andrej Karpathy</h4>
+                  <p class="schedule__speaker-role">
+                    Anthropic (Pretraining Team)
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 2: AI/ML -->
+          <div class="schedule__item">
+            <div class="schedule__time">
+              <time class="schedule__time-start" datetime="2026-07-20T10:15"
+                >10:15 AM</time
+              >
+              <time class="schedule__time-duration" datetime="PT60M"
+                >60 mins</time
+              >
+            </div>
+            <div class="schedule__timeline">
+              <div class="schedule__node"></div>
+            </div>
+            <article class="schedule__card">
+              <span class="schedule__badge badge--ai-ml">AI / ML</span>
+              <h3 class="schedule__title">
+                Building and Training Custom Foundation Models at Scale
+              </h3>
+              <p class="schedule__desc">
+                A technical look at high-performance training clusters,
+                optimization protocols, and large language model architectures.
+              </p>
+              <div class="schedule__speaker">
+                <img
+                  src="./assets/images/mustafa.png"
+                  alt="Mustafa Suleyman"
+                  class="schedule__speaker-img"
+                />
+                <div>
+                  <h4 class="schedule__speaker-name">Mustafa Suleyman</h4>
+                  <p class="schedule__speaker-role">CEO of Microsoft AI</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 3: Frontend -->
+          <div class="schedule__item">
+            <div class="schedule__time">
+              <time class="schedule__time-start" datetime="2026-07-20T11:30"
+                >11:30 AM</time
+              >
+              <time class="schedule__time-duration" datetime="PT60M"
+                >60 mins</time
+              >
+            </div>
+            <div class="schedule__timeline">
+              <div class="schedule__node"></div>
+            </div>
+            <article class="schedule__card">
+              <span class="schedule__badge badge--frontend">Frontend</span>
+              <h3 class="schedule__title">
+                Streaming and Islands: Next-Gen Web Architectures
+              </h3>
+              <p class="schedule__desc">
+                Exploring the rendering paradigms of tomorrow—reducing
+                JavaScript overhead while enabling complex client-side
+                interactions.
+              </p>
+              <div class="schedule__speaker">
+                <img
+                  src="./assets/images/gary.png"
+                  alt="Gary Marcus"
+                  class="schedule__speaker-img"
+                />
+                <div>
+                  <h4 class="schedule__speaker-name">Gary Marcus</h4>
+                  <p class="schedule__speaker-role">Staff Engineer at Vercel</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 4: Lunch -->
+          <div class="schedule__item">
+            <div class="schedule__time">
+              <time class="schedule__time-start" datetime="2026-07-20T12:30"
+                >12:30 PM</time
+              >
+              <time class="schedule__time-duration" datetime="PT90M"
+                >90 mins</time
+              >
+            </div>
+            <div class="schedule__timeline">
+              <div class="schedule__node"></div>
+            </div>
+            <article class="schedule__card schedule__card--event">
+              <span class="schedule__badge badge--event">Networking</span>
+              <h3 class="schedule__title">Lunch, Networking & Live Demos</h3>
+              <p class="schedule__desc">
+                Connect with fellow developers at our sponsor pavilions. Enjoy
+                catered lunch, interactive roundtables, and live product demos.
+              </p>
+              <div class="schedule__speaker">
+                <div class="schedule__event-icon">
+                  <i class="ri-restaurant-line"></i>
+                </div>
+                <div>
+                  <h4 class="schedule__speaker-name">DevConf Dining Hall</h4>
+                  <p class="schedule__speaker-role">All Attendees & Speakers</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 5: Cloud & DevOps -->
+          <div class="schedule__item">
+            <div class="schedule__time">
+              <time class="schedule__time-start" datetime="2026-07-20T14:00"
+                >02:00 PM</time
+              >
+              <time class="schedule__time-duration" datetime="PT60M"
+                >60 mins</time
+              >
+            </div>
+            <div class="schedule__timeline">
+              <div class="schedule__node"></div>
+            </div>
+            <article class="schedule__card">
+              <span class="schedule__badge badge--devops">Cloud & DevOps</span>
+              <h3 class="schedule__title">
+                Distributed Systems & AI Infrastructure Orchestration
+              </h3>
+              <p class="schedule__desc">
+                Deep dive into deploying, orchestrating, and scaling machine
+                learning workloads across multi-region Kubernetes clusters.
+              </p>
+              <div class="schedule__speaker">
+                <img
+                  src="./assets/images/demis.png"
+                  alt="Demis Hassabis"
+                  class="schedule__speaker-img"
+                />
+                <div>
+                  <h4 class="schedule__speaker-name">Demis Hassabis</h4>
+                  <p class="schedule__speaker-role">
+                    Co-Founder & CEO, Google DeepMind
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 6: Security -->
+          <div class="schedule__item">
+            <div class="schedule__time">
+              <time class="schedule__time-start" datetime="2026-07-20T15:15"
+                >03:15 PM</time
+              >
+              <time class="schedule__time-duration" datetime="PT60M"
+                >60 mins</time
+              >
+            </div>
+            <div class="schedule__timeline">
+              <div class="schedule__node"></div>
+            </div>
+            <article class="schedule__card">
+              <span class="schedule__badge badge--security">Security</span>
+              <h3 class="schedule__title">
+                Hardening DevSecOps: Guarding Code Repositories in the AI Era
+              </h3>
+              <p class="schedule__desc">
+                An analytical review of supply-chain vulnerabilities, code
+                poisoning, and automated credential leakage mitigation.
+              </p>
+              <div class="schedule__speaker">
+                <img
+                  src="./assets/images/mustafa.png"
+                  alt="Mustafa Suleyman"
+                  class="schedule__speaker-img"
+                />
+                <div>
+                  <h4 class="schedule__speaker-name">Mustafa Suleyman</h4>
+                  <p class="schedule__speaker-role">CEO of Microsoft AI</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 7: Closing Session -->
+          <div class="schedule__item">
+            <div class="schedule__time">
+              <time class="schedule__time-start" datetime="2026-07-20T16:30"
+                >04:30 PM</time
+              >
+              <time class="schedule__time-duration" datetime="PT60M"
+                >60 mins</time
+              >
+            </div>
+            <div class="schedule__timeline">
+              <div class="schedule__node"></div>
+            </div>
+            <article class="schedule__card schedule__card--closing">
+              <span class="schedule__badge badge--closing">Closing</span>
+              <h3 class="schedule__title">
+                Interactive Panel: The Developer Ecosystem in 2027 and Beyond
+              </h3>
+              <p class="schedule__desc">
+                All speakers return to the main stage for a collaborative panel
+                session, Q&A, and final closing remarks from the organizers.
+              </p>
+              <div class="schedule__speaker">
+                <div class="schedule__event-icon">
+                  <i class="ri-user-voice-line"></i>
+                </div>
+                <div>
+                  <h4 class="schedule__speaker-name">All Keynote Speakers</h4>
+                  <p class="schedule__speaker-role">DevConf Town Hall Panel</p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </main>
