@@ -40,7 +40,10 @@
 }
 
 body {
-  font: var(--fw-regular) var(--fs-base) / 1.6 var(--ff-base);
+  font-family: var(--ff-base);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-white);
 }
@@ -52,9 +55,17 @@ h3 {
   color: var(--color-heading);
 }
 
+h3 {
+  line-height: 1.3;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  font: inherit;
 }
 
 ul {
@@ -69,7 +80,19 @@ img {
 
 /* Reusable Css classes */
 .section {
-  padding-block: 5rem 2rem;
+  padding-block: 7rem 3rem;
+}
+
+.section__title {
+  font-size: var(--fs-5xl);
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  text-align: center;
+}
+
+.section__subtitle {
+  text-align: center;
+  margin-block: 1rem 4rem;
 }
 
 .container {
@@ -82,14 +105,19 @@ img {
   display: inline-block;
   background-color: var(--color-primary);
   border-radius: 10px;
+  border: 1px solid var(--color-primary);
+  padding-block: 0.75rem;
   font-weight: var(--fw-semibold);
-  line-height: 1.5;
   color: var(--color-white);
-  transition: background-color 0.3s;
+  text-align: center;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .btn:hover {
   background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
 }
 
 /* Header Section */
@@ -107,20 +135,20 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5.5rem;
+  height: 6rem;
 }
 
 .nav__list {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav__link {
-  font-size: var(--fs-base);
+  line-height: 1.6;
 }
 
 .nav__cta {
-  padding: 0.75rem 2.5rem;
+  padding-inline: 2.5rem;
 }
 
 /* Banner Section */
@@ -146,29 +174,26 @@ img {
 .banner__title {
   font-size: var(--fs-8xl);
   letter-spacing: -3.2px;
+  line-height: 1;
   color: var(--color-white);
 }
 
 .banner__desc {
-  padding: 0 2rem 16rem;
+  padding: 1.5rem 2rem 20rem;
   font-size: var(--fs-lg);
-  line-height: 1.5;
-  color: hsl(0, 0%, 90%);
+  line-height: 1.1;
+  color: hsl(0, 0%, 80%);
 }
 
 .banner__cta {
+  padding: 1.5rem 4rem;
   font-size: var(--fs-xl);
-  padding: 1rem 3rem;
-}
-/* Speakers Section */
-.section__title {
-  font-size: var(--fs-6xl);
-  line-height: 1.2;
-  text-align: center;
-  margin-bottom: 3.5rem;
+  line-height: 1;
 }
 
+/* Speakers Section */
 .speakers__container {
+  margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -184,7 +209,6 @@ img {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .speaker__category {
@@ -192,6 +216,7 @@ img {
   font-weight: var(--fw-semibold);
   letter-spacing: 0.3px;
   color: var(--color-primary);
+  margin-bottom: 4px;
 }
 
 .speaker__name {
@@ -203,16 +228,6 @@ img {
 }
 
 /* Pricing Section */
-.pricing .section__title {
-  font-size: var(--fs-5xl);
-  margin-bottom: 1rem;
-}
-
-.section__subtitle {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
 .pricing__container {
   display: grid;
   grid-template-columns: repeat(3, 370px);
@@ -244,10 +259,11 @@ img {
 }
 
 .pricing__price {
-  font-size: calc(var(--fs-5xl) - 4px);
+  font-size: calc(var(--fs-5xl) - 8px);
   font-weight: var(--fw-bold);
-  line-height: 1.2;
+  line-height: 1;
   color: var(--color-heading);
+  margin-block: 0.25rem;
 }
 
 .pricing__card-featured .pricing__price {
@@ -276,7 +292,6 @@ img {
   gap: 0.625rem;
   margin-bottom: 1.25em;
   font-size: var(--fs-sm);
-  line-height: 1.5;
 }
 
 .pricing__item::before {
@@ -291,17 +306,12 @@ img {
 
 .pricing__btn {
   width: 100%;
-  padding-block: 0.75rem;
-  border: 1px solid var(--color-primary);
   border-radius: 0.5rem;
   font-size: var(--fs-sm);
-  text-align: center;
 }
 
-.btn__standard,
-.btn__team {
+.outline-btn {
   background-color: transparent;
-  transition: all 0.3s;
 }
 
 .btn__standard {
@@ -315,8 +325,6 @@ img {
 
 .btn__standard:hover,
 .btn__team:hover {
-  background-color: var(--color-primary-hover);
-  border-color: var(--color-primary-hover);
   color: var(--color-white);
 }
 
@@ -328,7 +336,7 @@ img {
 
 .footer hr {
   border: none;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-muted);
   width: 100%;
   margin-block: 1rem;
 }
